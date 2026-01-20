@@ -3,7 +3,7 @@ from faster_whisper import WhisperModel
 class TranscriberService:
     def __init__(self):
         # Configuração para VPS (CPU + Precisão Turbo)
-        self.model = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8")
+        self.model = WhisperModel("medium", device="cpu", compute_type="int8")
 
     def run(self, audio_path):
         segments, _ = self.model.transcribe(
